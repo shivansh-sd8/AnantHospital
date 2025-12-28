@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine & Pulmonary Center</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f9ff;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #005b96;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #b3d4ff;
+            font-size: 1.1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #003d66;
+            padding: 0.8rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            background-color: #0077cc;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: #005b96;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #b3d4ff;
+        }
+        
+        .hero {
+            background-color: #e1f0ff;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .hero h1 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #005b96;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: all 0.3s;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            background-color: white;
+            color: #005b96;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h3 {
+            color: #005b96;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+        
+        .about-pulmonology {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .testimonials {
+            background-color: #e1f0ff;
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            font-size: 4rem;
+            color: #b3d4ff;
+            position: absolute;
+            top: -1rem;
+            left: 0.5rem;
+            line-height: 1;
+            opacity: 0.5;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #005b96;
+            margin-top: 1rem;
+            text-align: right;
+        }
+        
+        .specialists {
+            background-color: #e1f0ff;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .specialist-list {
+            margin-top: 1.5rem;
+        }
+        
+        .specialist-list li {
+            margin-bottom: 1rem;
+            list-style-position: inside;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #003d66;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .about-pulmonology {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Advanced Pulmonary Medicine Center</div>
+        <div class="tagline">Specialized Care for Respiratory Health</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Pulmonology</a></li>
+            <li><a href="#specialists">Our Specialists</a></li>
+            <li><a href="#testimonials">Patient Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section class="hero">
+            <h1>Expert Pulmonary Care</h1>
+            <p>Providing comprehensive diagnosis and treatment for respiratory conditions using the latest medical advancements.</p>
+            <a href="#appointment" class="btn">Schedule a Consultation</a>
+        </section>
+        
+        <section id="services">
+            <div class="section-title">Our Pulmonary Services</div>
+            <div class="services">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Asthma Treatment" class="service-img">
+                    <h3>Asthma Management</h3>
+                    <p>Comprehensive care for asthma including diagnosis, treatment plans, and long-term management strategies.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1584634731339-252c58ab6554?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="COPD Care" class="service-img">
+                    <h3>COPD Treatment</h3>
+                    <p>Specialized programs for Chronic Obstructive Pulmonary Disease including pulmonary rehabilitation.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Sleep Study" class="service-img">
+                    <h3>Sleep Disorders</h3>
+                    <p>Diagnosis and treatment of sleep-related breathing disorders including sleep apnea.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Lung Cancer" class="service-img">
+                    <h3>Lung Cancer Screening</h3>
+                    <p>Early detection programs for lung cancer using advanced imaging techniques.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pulmonary Function" class="service-img">
+                    <h3>Pulmonary Function Tests</h3>
+                    <p>Comprehensive lung function testing to diagnose and monitor respiratory conditions.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1579165466745-4191a5d00644?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bronchoscopy" class="service-img">
+                    <h3>Bronchoscopy Services</h3>
+                    <p>Minimally invasive procedures to diagnose and treat lung conditions.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about-pulmonology">
+            <div class="about-text">
+                <div class="section-title">About Pulmonary Medicine</div>
+                <p>Pulmonology is a medical specialty that deals with diseases involving the respiratory tract. Our pulmonologists are experts in diagnosing and treating conditions of the chest, particularly pneumonia, asthma, tuberculosis, emphysema, and complicated chest infections.</p>
+                <p>We provide care for patients with diseases of the lungs and respiratory system, from common conditions like bronchitis to complex illnesses such as pulmonary fibrosis. Our approach combines the latest diagnostic tools with evidence-based treatments to optimize respiratory health.</p>
+                <p>Our center is equipped with advanced technology including pulmonary function testing equipment, bronchoscopy suites, and sleep study facilities to provide comprehensive care for all respiratory conditions.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pulmonary Medicine">
+            </div>
+        </section>
+        
+        <section id="specialists" class="specialists">
+            <div class="section-title">Our Pulmonary Specialists</div>
+            <p>Our team consists of board-certified pulmonologists with extensive experience in respiratory medicine. While we respect patient privacy and don't display physician photos, we assure you of our team's exceptional qualifications:</p>
+            <ul class="specialist-list">
+                <li><strong>DR.P.D SHARMA</strong> - Specializing in asthma and allergic respiratory diseases</li>
+                <li><strong>DR. ASHUTOSH SRIVATAVA</strong> - Focused on interstitial lung diseases and pulmonary fibrosis</li>
+            </ul>
+        </section>
+        
+        <section id="testimonials" class="testimonials">
+            <div class="section-title">Patient Experiences</div>
+            <p>Hear from patients who have benefited from our pulmonary care services.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>After years of struggling with severe asthma, the treatment plan developed by the pulmonary team changed my life. I can now breathe comfortably and enjoy activities I had given up on.</p>
+                    <div class="testimonial-author">- Himanshu.</div>
+                </div>
+                <div class="testimonial">
+                    <p>The COPD management program helped me regain my independence. The education and support I received made all the difference in managing my condition.</p>
+                    <div class="testimonial-author">- Uday.</div>
+                </div>
+                <div class="testimonial">
+                    <p>When I was diagnosed with sleep apnea, I was skeptical about treatment. The caring staff explained everything and now I sleep better than I have in years.</p>
+                    <div class="testimonial-author">- Megha singhania.</div>
+                </div>c:\Users\suman\Downloads\med_pulomany.html.html
+            </div>
+        </section>
+    </div>
+    
+    <footer id="contact">
+        <div class="contact-info">
+        </div>
+        <p>© 2025  Medicine & Pulmonary Center Department | All Rights Reserved to Anant Hospital</p>
+    </footer>
+</body>
+</html>

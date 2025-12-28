@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Surgery & Cosmetic surgery Department</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            width: 98%;
+            max-width: 1600px;
+            margin: auto;
+            background: white;
+            padding: 70px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            animation: slideUp 1 s ease-in-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        header {
+            background: linear-gradient(to right, #3daef3, #007bbd);
+            color: white;
+            padding: 50px 0;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+        .footer {
+            background: #3daef3;
+            color: white;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 22px;
+        }
+        .doctor-card {
+            background: #fff;
+            margin: 30px auto;
+            padding: 40px;
+            border-radius: 15px;
+            width: 60%;
+            text-align: center;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+        }
+        .doctor-card:hover {
+            transform: scale(1.08);
+        }
+        .doctor-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 5px solid #3daef3;
+        }
+        .surgery-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .surgery-images img {
+            width: 400px;
+            height: 270px;
+            border-radius: 12px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .surgery-images img:hover {
+            transform: scale(1.12);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Plastic Surgery Department
+    </header>
+    <div class="container">
+        <h2 style="color: #3daef3;">About Plastic Surgery</h2>
+        <p style="font-size: 18px; color: #444;">Plastic surgery is a specialized medical field focused on reconstructing and enhancing physical appearance through surgical and non-surgical procedures. It includes cosmetic enhancements, reconstructive surgery, and treatments for congenital abnormalities, burns, and injuries.</p>
+        
+        <div class="surgery-images">
+            <img src="assets/img/plastic 1.avif" alt="Plastic Surgery Image 1">
+            <img src="assets/img/plastic 2.avif" alt="Plastic Surgery Image 2">
+            <img src="assets/img/plastic 3.avif" alt="Plastic Surgery Image 3">
+        </div>
+        
+        <div class="section">
+            <h2 style="color: #3daef3;">Advanced Treatments</h2>
+            <p>Our department specializes in state-of-the-art procedures, including rhinoplasty, facelifts, liposuction, reconstructive surgeries, and minimally invasive techniques for aesthetic and medical improvements.</p>
+        </div>
+        
+        <h2 style="color: #3daef3; margin-top: 30px;">Meet Our Expert</h2>
+        <div class="doctor-card">
+            <img src="https://via.placeholder.com/180" alt="Doctor Image">
+            <h3 style="color: #007bbd;">DR. SUDHIR SINGH</h3>
+            <p style="font-size: 18px;"><strong>Specialization:</strong> Plastic Surgeon</p>
+            <p style="font-size: 18px;"><strong>Degree:</strong>Plastic Surgeon
+             </p>
+        </div>
+        
+        <div class="section">
+            <h2 style="color: #3daef3;">Patient Testimonials</h2>
+            <p>"The plastic surgery team at this hospital transformed my life. Their professionalism and care were exceptional!" - John Doe</p>
+            <p>"I had reconstructive surgery, and the results were beyond my expectations. Thank you to the wonderful surgeons!" - Sarah Khan</p>
+        </div>
+        
+        <div class="section">
+            <h2 style="color: #3daef3;">FAQs</h2>
+            <p><strong>Q:</strong> What are the most common plastic surgery procedures?</p>
+            <p><strong>A:</strong> Some of the most common procedures include rhinoplasty, breast augmentation, liposuction, facelift, and scar revision surgery.</p>
+            <p><strong>Q:</strong> How do I book an appointment?</p>
+            <p><strong>A:</strong> You can contact our hospital directly or click on the button below to schedule an appointment.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2025 Anant Hospital | All Rights Reserved
+    </footer>
+</body>
+</html>
+

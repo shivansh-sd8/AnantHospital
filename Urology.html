@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urology Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f9ff;
+        }
+        
+        header {
+            background-color: #005b96;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .tagline {
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: #e1f0ff;
+            border-radius: 8px;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: #005b96;
+            margin-bottom: 1rem;
+        }
+        
+        .service-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+        
+        .about {
+            margin: 3rem 0;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .specialists {
+            background: #e1f0ff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .specialist-list li {
+            margin-bottom: 0.5rem;
+            list-style-position: inside;
+        }
+        
+        footer {
+            background: #003d66;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Advanced Urology Center</div>
+        <div class="tagline">Specialized Care for Urinary and Male Reproductive Health</div>
+    </header>
+    
+    <div class="container">
+        <section class="hero">
+            <h1>Comprehensive Urological Care</h1>
+            <p>Expert diagnosis and treatment for urinary tract and male reproductive system conditions</p>
+        </section>
+        
+        <section class="services">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Prostate Health" class="service-img">
+                <h3>Prostate Health</h3>
+                <p>Diagnosis and treatment of BPH, prostatitis, and prostate cancer screening.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Kidney Stones" class="service-img">
+                <h3>Kidney Stone Treatment</h3>
+                <p>Minimally invasive procedures for stone removal and prevention.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1579165466745-4191a5d00644?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Urologic Oncology" class="service-img">
+                <h3>Urologic Oncology</h3>
+                <p>Specialized care for cancers of the bladder, kidney, and prostate.</p>
+            </div>
+        </section>
+        
+        <section class="about">
+            <div class="about-text">
+                <h2>About Our Department</h2>
+                <p>Our Urology Department provides comprehensive care for conditions affecting the urinary tract system and male reproductive organs.</p>
+                <p>We offer both medical and surgical treatments using the latest technologies including laser therapy, robotic surgery, and minimally invasive techniques.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Urology Team">
+            </div>
+        </section>
+        
+        <section class="specialists">
+            <h2>Our Urology Specialists</h2>
+            <ul class="specialist-list">
+               
+              
+                <li><strong>DR. MUDIT MAHESHWARI</strong> - Urologic oncology expert</li>
+               
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="contact-info">
+        </div>
+        <p>© Urology Department | All Rights Reserved to Anant Hospital</p>
+    </footer>
+</body>
+</html>
